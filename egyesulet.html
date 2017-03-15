@@ -1,487 +1,288 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="keywords"
-	content="Mahos Kreuzlingen, Mahos Thurgau, MAHOS, magyar hetvegi ovi, magyar hetvegi suli, magyar hetvegi ovi-suli, Ungarischer Verein, Ungarischer Verein Bodensee, Ungarischer Verein Thurgau, Ungarischer Verein Kreuzlingen, Ungarischer Verein Konstanz, Ungarischer Kindergarten Konstanz und Kreuzlingen, Ungarn in Schweiz">
-<!-- <meta name="description" content="Ungarischer Verein Thurgau - über uns und mit uns Zeit sinnvoll verbringen. Magyar hétvégi ovi-suli. Kreuzlingenben!"> -->
-<meta name="description"
-	content="Magyar hétvégi ovi-suli. Kreuzlingenben!">
-<!-- <meta name="DC.Description" content="Die Homepage stellt die Ungarischer Verein Thurgau dar, die Angebote der Verein f&uuml;r die Kinder und dessen Mitglieder"> -->
-<meta name="DC.Description"
-	content="A weboldal bemutatja a Thurgaui magyarok egyesület programjait, tagjait.">
-<meta name="title" content="Thurgaui magyarok egyesülete">
-<meta name="language" content="Hungarian, hu, magyar">
-<meta name="author" content="Toth-Gati Norbert IB">
-<meta name="publisher" content="Toth-Gati Norbert IB">
-<meta name="copyright" content="tgnib.sofiplan.de">
-<meta name="revisit-after" content="after 30 days">
-<meta name="date" content="2014-04-23">
-<meta name="page-topic"
-	content="A thurgaui magyarok egyesület bemutatása">
-<meta name="page-type" content="Egyesület">
-<meta name="audience" content="felnött">
-<meta name="robots" content="index,follow">
-<meta name="generator" content="http://ungarischervereinthurgau.ch/">
-<meta name="pragma" content="no-cache">
-<meta http-equiv="Content-Script-Type" content="text/javascript">
-<meta http-equiv="Content-Style-Type" content="text/css">
+	<!DOCTYPE html>
+	<html lang="en"><head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="Mahos Kreuzlingen, Mahos Thurgau, MAHOS, magyar hetvegi ovi, magyar hetvegi suli, magyar hetvegi ovi-suli, Ungarischer Verein, Ungarischer Verein Bodensee, Ungarischer Verein Thurgau, Ungarischer Verein Kreuzlingen, Ungarischer Verein Konstanz, Ungarischer Kindergarten Konstanz und Kreuzlingen, Ungarn in Schweiz">
+	<!-- <meta name="description" content="Ungarischer Verein Thurgau - über uns und mit uns Zeit sinnvoll verbringen. Magyar hétvégi ovi-suli. Kreuzlingenben!"> -->
+	<meta name="description" content="Magyar hétvégi ovi-suli. Kreuzlingenben!">
+	<!-- <meta name="DC.Description" content="Die Homepage stellt die Ungarischer Verein Thurgau dar, die Angebote der Verein f&uuml;r die Kinder und dessen Mitglieder"> -->
+	<meta name="DC.Description" content="A weboldal bemutatja a Thurgaui magyarok egyesület programjait, tagjait.">
+	<meta name="title" content="Thurgaui magyarok egyesülete">
+	<meta name="language" content="Hungarian, hu, magyar">
+	<meta name="author" content="Toth-Gati Norbert IB">
+	<meta name="publisher" content="Toth-Gati Norbert IB">
+	<meta name="copyright" content="tgnib.sofiplan.de">
+	<meta name="revisit-after" content="after 30 days">
+	<meta name="date" content="2014-04-23">
+	<meta name="page-topic" content="A thurgaui magyarok egyesület bemutatása">
+	<meta name="page-type" content="Egyesület">
+	<meta name="audience" content="felnött">
+	<meta name="robots" content="index,follow">
+	<meta name="generator" content="http://ungarischervereinthurgau.ch/">
+	<meta name="pragma" content="no-cache">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<!-- Created by Toth-Gat Norbert IB. http://tgnib.sofiplan.de Software towards mobile. -->
+	<link rel="shortcut icon" href="assets/img/tulip%20-%20Kopie2.png"><title>Thurgaui magyarok egyesülete</title>
 
-<!--
-	Created by Toth-Gat Norbert IB.
-	http://tgnib.sofiplan.de
-	Software towards mobile. 
- -->
-<link rel="shortcut icon" href="assets/img/tulip - Kopie2.png">
-
-<title>Thurgaui magyarok egyesülete</title>
-
-<!-- Bootstrap core CSS -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/jquery.gcal_flow.css" rel="stylesheet" type="text/css">
-
-<!-- Just for debugging purposes. Don't actually copy this line! -->
-<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-
-<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-<!-- Custom styles for this template -->
-<link href="carousel.css" rel="stylesheet">
-<style type="text/css">
-h2 {
+	<!-- Bootstrap core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/jquery.gcal_flow.css" rel="stylesheet" type="text/css">
+	<!-- Just for debugging purposes. Don't actually copy this line! --><!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]--><!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries --><!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]--><!-- Custom styles for this template -->
+	<link href="carousel.css" rel="stylesheet">
+	<style type="text/css">
+	h2 {
 	clear: both;
 	margin-top: 2em;
-}
-
-#gcf-design .gcf-header-block {
+	}
+	#gcf-design .gcf-header-block {
 	background: gray;
 	filter: none;
-}
-
-#gcf-design {
+	}
+	#gcf-design {
 	height: 400px;
 	width: 400px;
 	filter: none;
-}
-</style>
-<!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
-<script type="text/javascript">
-    window.cookieconsent_options = {"message":"Ez az oldal cookie-kat használ.","dismiss":"Rendben!","learnMore":"További információ","link":"https://www.google.com/intl/hu/policies/technologies/cookies/","theme":"light-bottom"};
-</script>
+	}
+	</style><!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
+	<script type="text/javascript">
+	window.cookieconsent_options = {"message":"Ez az oldal cookie-kat használ.","dismiss":"Rendben!","learnMore":"További információ","link":"https://www.google.com/intl/hu/policies/technologies/cookies/","theme":"light-bottom"};
+	</script>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script><!-- End Cookie Consent plugin --><!-- NAVBAR ================================================== -->
+	</head>
 
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
-<!-- End Cookie Consent plugin -->
-</head>
-<!-- NAVBAR
-================================================== -->
-<body>
+
+	<body>
 	<div id="fb-root"></div>
 	<script>
-		(function(d, s, id) {
-			var js, fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id))
-				return;
-			js = d.createElement(s);
-			js.id = id;
-			js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-			fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));
+	(function(d, s, id) {
+	var js, fjs = d.getElementsByTagName(s)[0];
+	if (d.getElementById(id))
+	return;
+	js = d.createElement(s);
+	js.id = id;
+	js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+	fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
 	</script>
-
-	<div class="navbar-wrapper jumbotron">
-		<div class="container">
-
-			<a class="pull-right visible-lg visible-md" href="#" title="Magyar"
-				alt="Magyar"> <img src="assets/img/flag-hu.png"
-				style="height: 30px; border: 2px solid white;" /></a> <a
-				class="pull-right visible-lg visible-md"
-				href="http://de.ungarischervereinthurgau.ch" title="Deutsch"
-				alt="Deutsch"> <img src="assets/img/flag-de.png"
-				style="height: 30px; border: 2px solid white;" /></a> <a
-				href="index.html" alt="Thurgaui magyarok egyesülete"> <img
-				class="brand visible-lg visible-md" alt="Verein"
-				src="assets/img/logo_TME.png"></a> <br> <br> <a
-				href="index.html" alt="Thurgaui magyarok egyesülete"> <img
-				class="brand visible-sm pull-left" alt="Verein"
-				src="assets/img/logo_TME_sm.png">
-			</a> <a href="index.html" alt="Thurgaui magyarok egyesülete"> <img
-				class="brand visible-xs pull-left" alt="Verein"
-				src="assets/img/logo_TME_xs.png"></a> <a
-				class="pull-right visible-sm visible-xs" href="#" title="Magyar"
-				alt="Magyar"> <img src="assets/img/flag-hu.png"
-				style="height: 30px; border: 2px solid white;" /></a> <a
-				class="pull-right visible-sm visible-xs"
-				href="http://de.ungarischervereinthurgau.ch" title="Deutsch"
-				alt="Deutsch"> <img src="assets/img/flag-de.png"
-				style="height: 30px; border: 2px solid white;" /></a>
-
-			<div class="navbar navbar-inverse navbar-static-top "
-				role="navigation">
-				<div class="container">
-					<div class="navbar-header" data-toggle="collapse">
-
-						<button type="button" class="navbar-toggle" data-toggle="collapse"
-							data-target=".navbar-collapse">
-							<span class="sr-only">Toggle navigation</span> <span
-								class="icon-bar"></span> <span class="icon-bar"></span> <span
-								class="icon-bar"></span>
-						</button>
-
-					</div>
-
-					<div class="navbar-collapse collapse ">
-						<!-- <div class="nav-collapse collapse" -->
-						<!-- 					<ul class="nav nav-pills pull-right top-space"> -->
-
-						<ul class="nav navbar-nav">
-							<li><a href="index.html">Főoldal</a></li>
-							
-							<li class="active"><a href="egyesulet.html">Egyesület</a></li>
-							<li><a href="program.html">Programok</a></li>
-							<li><a href="fotok.html">Fotók</a></li>
-							<li><a href="index.html#kapcsolat">Kapcsolat</a></li>
-							<li class="dropdown"></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
+	<div style="height: 262px;" class="navbar-wrapper jumbotron">
+	<div class="container"> <a class="pull-right visible-lg visible-md" href="#" title="Magyar" alt="Magyar"> <img src="assets/img/flag-hu.png" style="border: 2px solid white; height: 30px;"></a> <a class="pull-right visible-lg visible-md" href="http://de.ungarischervereinthurgau.ch" title="Deutsch" alt="Deutsch"> <img src="assets/img/flag-de.png" style="border: 2px solid white; height: 30px;"></a> <a href="index.html" alt="Thurgaui magyarok egyesülete">
+	<img class="brand visible-lg visible-md" alt="Verein" src="assets/img/logo_TME.png"></a> <br>
+	<br>
+	<a href="index.html" alt="Thurgaui magyarok egyesülete">
+	<img class="brand visible-sm pull-left" alt="Verein" src="assets/img/logo_TME_sm.png"> </a> <a href="index.html" alt="Thurgaui magyarok egyesülete">
+	<img class="brand visible-xs pull-left" alt="Verein" src="assets/img/logo_TME_xs.png"></a> <a class="pull-right visible-sm visible-xs" href="#" title="Magyar" alt="Magyar"> <img src="assets/img/flag-hu.png" style="border: 2px solid white; height: 30px;"></a> <a class="pull-right visible-sm visible-xs" href="http://de.ungarischervereinthurgau.ch" title="Deutsch" alt="Deutsch"> <img src="assets/img/flag-de.png" style="border: 2px solid white; height: 30px;"></a>
+	<div class="navbar navbar-inverse navbar-static-top" role="navigation">
+	<div class="container">
+	<div class="navbar-header" data-toggle="collapse"> <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+	<span class="icon-bar"></span> </button> </div>
+	<div class="navbar-collapse collapse"><!-- <div class="nav-collapse collapse" --><!-- <ul class="nav nav-pills pull-right top-space"> -->
+	<ul class="nav navbar-nav">
+	<li><a href="index.html">Főoldal</a></li>
+	<li class="active"><a href="egyesulet.html">Egyesület</a></li>
+	<li><a href="program.html">Programok</a></li>
+	<li><a href="fotok.html">Fotók</a></li>
+	<li><a href="index.html#kapcsolat">Kapcsolat</a></li>
+	<li class="dropdown"></li>
+	</ul>
 	</div>
-
+	</div>
+	</div>
+	</div>
+	</div>
 	<div class="container marketing">
-		<div class="row">
-			<div class="col-lg-1">
-				<a href="#egyesulet">Egyesület</a>
-			</div>
-			<div class="col-lg-1">
-				<a href="#aktualis">A csapat</a>
-			</div>
-			<div class="col-lg-1">
-				<a href="#volt">Volt tagok</a>
-			</div>
-			<div class="col-lg-1">
-				<a href="#dij">Tagdíj</a>
-			</div>
-			<div class="col-lg-1">
-				<a href="#dokumentumok">Dokumentumok</a>
-			</div>
-		</div>
-
-		<div class="row" id="egyesulet">
-			<div class="col-lg-4"></div>
-			<div class="col-lg-4 text-center ">
-				<h1>Az egyesületről</h1>
-				<hr class="featurette-divider">
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-lg-2"></div>
-			<div class="col-lg-8 text-center ">
-				<p class="lead">
-					Egyesületünk tevékenysége elsősorban a Kreuzlingenben helyet kapott
-					magyar hétvégi óvoda és iskola köré koncentrálódik.<br>
-					Célunk, hogy a Svájcban és környékén egyre nagyobb számban élő
-					magyar anyanyelvűeket és családjaikat összefogjuk. Egyesületünk
-					dinamikusan fejlődik, tagjaink közé várunk bárkit, aki csatlakozni
-					szeretne. Programjainkra nagy szeretettel várunk minden érdeklődőt
-					– szülessenek új barátságok a mindig vidám társaságban! Rendszeres
-					információkért iratkozzon fel hírlevelünkre vagy csatlakozzon
-					<a target="_blank" href="https://www.facebook.com/ungarischervereinthurgau/">Facebook</a> oldalunkhoz! 
-					Minden témában részletes leírás található az
-					egyes menüpontok alatt.
-				</p>
-
-			</div>
-		</div>
-		<hr class="featurette-divider">
-
-		<div class="row" id="aktualis">
-			<div class="col-lg-4"></div>
-			<div class="col-lg-4 text-center ">
-				<h1>A csapat</h1>
-				<hr class="featurette-divider">
-			</div>
-
-		</div>
-
-		<div class="row">
-			<div class="col-lg-4">
-				<img class="img-circle" src="assets/img/cili.png" alt="nev">
-				<h2>Korda Cecília	</h2>
-				<h4>Elnök</h4>
-				<p>2008 óta élek családommal Thurgauban.
-					Alapítása óta tagjai vagyunk az
-					egyesületnek, amelyhez sok kellemes élmény fűz. Férjemmel, Müller
-					Gyulával gondoskodunk az ünnepek zenei aláfestéséről. Két
-					gyermekünk, Zsuzsanna és Péter szívesen járnak az iskolai
-					foglalkozásokra. Nagyon fontos számunkra, hogy a külföldi lét
-					ellenére minél jobban megtanulják csodálatos nyelvünket. Ehhez
-					óriási segítséget nyújt az egyesület, a pedagógusok. 2015
-					februárjától az egyesületet alelnökként, 2016 szeptembertől elnökként segítem.
-					Szeretettel várunk minden magyar
-					és magyar kötődésű gyereket és szüleiket határon innen és túl.</p>
-			</div>
-			<!-- /.col-lg-4 -->
-			<div class="col-lg-4">
-				<img class="img-circle" src="assets/img/gyongyi.jpg" alt="nev">
-				<h2>Háry Gyöngyi</h2>
-				<h4>Társelnök</h4>
-				<p>Frauenfeldben élek férjemmel és két
-					kislányunkkal. 2011-2016 között voltam az egyesület vezetője.
-					</p>
-			</div>
-			<!-- /.col-lg-4 -->
-			
-			<div class="col-lg-4">
-				<img class="img-circle" src="assets/img/CsapoBalazs.png" alt="nev">
-				<h2>Csapó Balázs</h2>
-				<h4>Pénztáros</h4>
-				<p>2006-tól élek Svájcban. Az egyesületnek 2012-től vagyok tagja, 2016-tól pénztáros.
-                   Kislányom az óvoda lelkes tagja. Remélem, tevékenységünket a közeljövőben ki tudjuk terjeszteni fiataloknak és felnőtteknek való programokkal is.</p>
-			</div>
-			<!-- /.col-lg-4 -->
-		</div>
-		<!-- /.row -->
-
-		<div class="row">
-			<div class="col-lg-4">
-				<img class="img-circle" src="assets/img/judit.png" alt="nev">
-				<h2>Molnárné Balogh Judit</h2>
-				<h4>Tanító néni</h4>
-			</div>
-			<!-- /.col-lg-4 -->
-			<div class="col-lg-4">
-				<img class="img-circle" src="assets/img/zita.png" alt="nev">
-				<h2>Csutorka Zita</h2>
-				<h4>Tanító néni</h4>
-			</div>
-			<!-- /.col-lg-4 -->
-			<div class="col-lg-4">
-				<img class="img-circle" src="assets/img/moni.png" alt="nev">
-				<h2>Kószóné Móni</h2>
-				<h4>Óvó néni</h4>
-			</div>
-			<!-- /.col-lg-4 -->
-		</div>
-		<!-- /.row -->
-
-		<div class="row">
-			<!-- /.col-lg-4 -->
-			<div class="col-lg-4">
-				<img class="img-circle" src="assets/img/szuza.png" alt="nev">
-				<h2>Losoncz Szuzanna</h2>
-				<h4>Óvó néni</h4>
-			</div>
-			<!-- /.col-lg-4 -->
-			<div class="col-lg-4">
-				<img class="img-circle" src="assets/img/mihaly.png" alt="nev">
-				<h2>Molnár Mihály</h2>
-				<h4>Klubfotós és videós</h4>
-				<p></p>
-			</div>
-		</div>
-		<!-- /.row -->
-
-		<button type="button" class="btn btn-link btn-lg pull-right"
-			onclick="$('body').animate({scrollTop : 0},800);">
-			<span class="glyphicon glyphicon-chevron-up"></span>
-		</button>
-		<!-- /.row -->
-		<hr class="featurette-divider">
-		<div class="row" id="volt">
-			<div class="col-lg-4"></div>
-			<div class="col-lg-4 text-center ">
-				<h1>Volt tagok</h1>
-				<hr class="featurette-divider">
-			</div>
-
-		</div>
-
-		<div class="row">
-			<div class="col-lg-4">
-				<img class="img-circle" src="assets/img/dora.jpg" alt="nev">
-				<h2>Bubálik Dóra</h2>
-				<h4>Óvó néni</h4>
-				<p>A Katica csoport első óvó nénije volt 2009. februártól 2010.
-					novemberig</p>
-			</div>
-			<div class="col-lg-4">
-				<img class="img-circle" src="assets/img/matezs.png	" alt="nev">
-				<h2>Máté Enikő</h2>
-				<h4>Óvó néni</h4>
-				<p>A Katica csoport második óvó nénije volt nővére, Adrienn
-					segítségével 2009-től 2010-ig. Elhunyt 2010. december 11-én</p>
-			</div>
-			<div class="col-lg-4">
-				<img class="img-circle" src="assets/img/p.zsuzsa.png" alt="nev">
-				<h2>Péter Zsuzsa</h2>
-				<h4>Óvó néni</h4>
-				<p>Katica csoportunk óvó nénije volt 2010. februártól 2010.
-					májusig</p>
-			</div>
-
-		</div>
-
-		<div class="row">
-			<div class="col-lg-4">
-				<img class="img-circle" src="assets/img/adri.png" alt="nev">
-				<h2>Adrienn von Tóth</h2>
-				<h4>A Club anyja!</h4>
-				<p>Ő hozta 2009 februárjában létre az egyesületet. Sajnos privát
-					okok miatt el kellett búcsúzzunk tőle 2011. májusában</p>
-
-
-			</div>
-			<div class="col-lg-4">
-				<img class="img-circle" src="assets/img/lzs.png" alt="nev">
-				<h2>Lagler Zsuzsi</h2>
-				<h4>A törpe klub vezetője volt kezdettől 2011-ig</h4>
-				<p></p>
-			</div>
-			<div class="col-lg-4">
-				<img class="img-circle" src="assets/img/jj.png" alt="nev">
-				<h2>Jászapáthy Judit</h2>
-				<h4>A nagy csoport tanító nénije volt kezdettől 2011-ig</h4>
-				<p></p>
-			</div>
-
-		</div>
-		<button type="button" class="btn btn-link btn-lg pull-right"
-			onclick="$('body').animate({scrollTop : 0},800);">
-			<span class="glyphicon glyphicon-chevron-up"></span>
-		</button>
-		<hr class="featurette-divider">
-		<div class="row" id="dokumentumok">
-
-			<div class="col-lg-4"></div>
-			<div class="col-lg-4 text-center ">
-				<h1>Az alapító okirat</h1>
-				<br>
-				<h3>
-					<a href="assets/pdf/statuten.pdf">Letöltés</a>
-				</h3>
-			</div>
-		</div>
-		<div class="row visible-lg visible-md">
-			<object class="col-lg-12" data="assets/pdf/statuten.pdf"
-				type="application/pdf" height="600"></object>
-		</div>
-		<button type="button" class="btn btn-link btn-lg pull-right"
-			onclick="$('body').animate({scrollTop : 0},800);">
-			<span class="glyphicon glyphicon-chevron-up"></span>
-		</button>
-		<hr class="featurette-divider">
-		<div class="row">
-
-			<div class="col-lg-4"></div>
-			<div class="col-lg-4 text-center ">
-				<h1>Jelentkezési lap a magyar hétvégi ovi-suli foglalkozásaira</h1>
-				<br>
-				<h3>
-					<a href="assets/pdf/Jelentkezesi lap.pdf">Letöltés</a>
-				</h3>
-			</div>
-		</div>
-		<div class="row visible-lg visible-md">
-			<object class="col-lg-12" data="assets/pdf/Jelentkezesi lap.pdf"
-				type="application/pdf" height="600"></object>
-		</div>
-		<button type="button" class="btn btn-link btn-lg pull-right"
-			onclick="$('body').animate({scrollTop : 0},800);">
-			<span class="glyphicon glyphicon-chevron-up"></span>
-		</button>
-		<hr class="featurette-divider">
-		<div class="row">
-
-			<div class="col-lg-4"></div>
-			<div class="col-lg-4 text-center ">
-				<h1>Ungarischer Verein Thurgau - Antrag auf Mitgliedschaft</h1>
-				<br>
-				<h3>
-					<a href="assets/pdf/Antrag Ungarischer Verein Thurgau.pdf">Letöltés</a>
-				</h3>
-			</div>
-		</div>
-		<div class="row visible-lg visible-md">
-			<object class="col-lg-12"
-				data="assets/pdf/Antrag Ungarischer Verein Thurgau.pdf"
-				type="application/pdf" height="600"></object>
-
-		</div>
-		<button type="button" class="btn btn-link btn-lg pull-right"
-			onclick="$('body').animate({scrollTop : 0},800);">
-			<span class="glyphicon glyphicon-chevron-up"></span>
-		</button>
+	<div class="row">
+	<div class="col-lg-1"> <a href="#egyesulet">Egyesület</a>
 	</div>
-
+	<div class="col-lg-1"> <a href="#aktualis">A
+	csapat</a> </div>
+	<div class="col-lg-1"> <a href="#dij">Tagdíj</a>
+	</div>
+	<div class="col-lg-1"> <a href="#dokumentumok">Dokumentumok</a>
+	</div>
+	</div>
+	<div class="row" id="egyesulet">
+	<div class="col-lg-4"></div>
+	<div class="col-lg-4 text-center">
+	<h1>Az egyesületről</h1>
+	<br>
+	</div>
+	</div>
+	<div class="row">
+	<div class="col-lg-2"></div>
+	<div class="col-lg-8 text-center"><div style="text-align: justify;">
+	</div><p style="text-align: justify;" class="lead"> Egyesületünk tevékenysége elsősorban a
+	Kreuzlingenben helyet kapott magyar hétvégi óvoda és iskola köré
+	koncentrálódik.<br>
+	Célunk, hogy a Svájcban és környékén egyre nagyobb számban élő magyar
+	anyanyelvűeket és családjaikat összefogjuk. Egyesületünk dinamikusan
+	fejlődik, tagjaink közé várunk bárkit, aki csatlakozni szeretne.
+	Programjainkra nagy szeretettel várunk minden érdeklődőt! Csatlakozzon <a target="_blank" href="https://www.facebook.com/ungarischervereinthurgau/">Facebook</a>
+	oldalunkhoz!&nbsp; </p>
+	</div>
+	</div>
+	<br>
+	<div class="row" id="aktualis">
+	<div class="col-lg-4"></div>
+	<div class="col-lg-4 text-center">
+	<h1>A csapat</h1>
+	<br>
+	</div>
+	</div>
+	<div class="row">
+	<div class="col-lg-4"> <img class="img-circle" src="assets/img/cili.png" alt="nev">
+	<h2>Korda Cecília </h2>
+	<h4>Elnök</h4>
+	<p>2008 óta élek családommal Thurgauban. Alapítása óta tagjai
+	vagyunk az egyesületnek, amelyhez sok kellemes élmény fűz. Férjemmel,
+	Müller Gyulával gondoskodunk az ünnepek zenei aláfestéséről. Két
+	gyermekünk, Zsuzsanna és Péter szívesen járnak az iskolai
+	foglalkozásokra. Nagyon fontos számunkra, hogy a külföldi lét ellenére
+	minél jobban megtanulják csodálatos nyelvünket. Ehhez óriási segítséget
+	nyújt az egyesület, a pedagógusok. 2015 februárjától az egyesületet
+	alelnökként, 2016 szeptembertől elnökként segítem. Szeretettel várunk
+	minden magyar és magyar kötődésű gyereket és szüleiket határon innen és
+	túl.</p>
+	</div>
+	<!-- /.col-lg-4 -->
+	<div class="col-lg-4"> <img style="width: 140px; height: 140px;" alt="nev" src="assets/img/szuza.png" class="img-circle">
+	<h2>Losoncz Szuzanna</h2>
+	<h4>Társelnök</h4>&nbsp;és tanító néni <br>Bemutatkozás nemsokára itt lesz... 
+	</div>
+	<!-- /.col-lg-4 -->
+	<div class="col-lg-4"> <img class="img-circle" src="assets/img/CsapoBalazs.png" alt="nev">
+	<h2>Csapó Balázs</h2>
+	<h4>Pénztáros</h4>
+	<p>2006-tól élek Svájcban. Az egyesületnek 2012-től vagyok tagja,
+	2016-tól pénztáros. Kislányom az óvoda lelkes tagja. Remélem,
+	tevékenységünket a közeljövőben ki tudjuk terjeszteni fiataloknak és
+	felnőtteknek való programokkal is.</p>
+	</div>
+	<!-- /.col-lg-4 --> </div>
+	<!-- /.row -->
+	<div class="row">
+	<div class="col-lg-4"> <img class="img-circle" src="assets/img/judit.png" alt="nev">
+	<h2>Molnárné Balogh Judit</h2>
+	<h4>Tanító néni</h4>
+	</div>
+	<!-- /.col-lg-4 -->
+	<div class="col-lg-4"> <img style="width: 140px; height: 140px;" class="img-circle" src="assets/img/mihaly.png" alt="nev">
+	<h2>Molnár Mihály</h2>
+	<h4>Tanító bácsi</h4>
+	</div>
+	
+	<!-- /.col-lg-4 -->
+	<div class="col-lg-4"> <img style="width: 140px; height: 140px;" class="img-circle" src="assets/img/MolnarGyongyi.png" alt="nev">
+	<h2>Molnár Gyöngyi</h2>
+	<h4>Tanító néni</h4>
+	</div>
+	
+	
+	
+	<!-- /.col-lg-4 -->
+	<div class="col-lg-4"> <img class="img-circle" src="assets/img/moni.png" alt="nev">
+	<h2>Kószóné Móni</h2>
+	<h4>Óvó néni</h4>
+	</div>
+	<!-- /.col-lg-4 --> </div>
+	<!-- /.row -->
+	<div class="row"><!-- /.col-lg-4 -->
+	<div class="col-lg-4"> <img style="width: 140px; height: 140px;" class="img-circle" src="assets/img/FabianErika.png" alt="nev">
+	<h2>Fábián Erika</h2>
+	<h4>Törpeklub vezető</h4>
+	</div>
+	<!-- /.col-lg-4 -->
+	<div class="col-lg-4"> <img style="width: 140px; height: 140px;" class="img-circle" src="assets/img/ChiciAndrea.png" alt="nev">
+	<h2>Chici Andrea</h2>
+	<h4>Törpeklub vezető</h4><h4></h4>
+	<p></p>
+	</div>
+	</div>
+	<div style="text-align: center;">
+	<div style="text-align: right;"><!-- /.row -->
+	<button type="button" class="btn btn-link btn-lg pull-right" onclick="$('body').animate({scrollTop : 0},800);"> <span class="glyphicon glyphicon-chevron-up"></span> </button>
+	<!-- /.row --></div>
+	</div>
+	<div class="row" id="dokumentumok">
+	<div class="col-lg-4"></div>
+	<div class="col-lg-4 text-center">
+	<h1>Az alapító okirat</h1>
+	<br>
+	<h3> <a href="assets/pdf/statuten.pdf">Letöltés</a>
+	</h3>
+	</div>
+	</div>
+	<div class="row visible-lg visible-md"> <object class="col-lg-12" data="assets/pdf/statuten.pdf" type="application/pdf" height="600"></object> </div>
+	<button type="button" class="btn btn-link btn-lg pull-right" onclick="$('body').animate({scrollTop : 0},800);"> <span class="glyphicon glyphicon-chevron-up"></span> </button>
+	<hr class="featurette-divider">
+	<div class="row">
+	<div class="col-lg-4"></div>
+	<div class="col-lg-4 text-center">
+	<h1>Jelentkezési lap a magyar hétvégi ovi-suli foglalkozásaira</h1>
+	<br>
+	<h3> <a href="assets/pdf/Jelentkezesi%20lap.pdf">Letöltés</a>
+	</h3>
+	</div>
+	</div>
+	<div class="row visible-lg visible-md"> <object class="col-lg-12" data="assets/pdf/Jelentkezesi lap.pdf" type="application/pdf" height="600"></object> </div>
+	<button type="button" class="btn btn-link btn-lg pull-right" onclick="$('body').animate({scrollTop : 0},800);"> <span class="glyphicon glyphicon-chevron-up"></span> </button>
+	<hr class="featurette-divider">
+	<div class="row">
+	<div class="col-lg-4"></div>
+	<div class="col-lg-4 text-center">
+	<h1>Ungarischer Verein Thurgau - Antrag auf Mitgliedschaft</h1>
+	<br>
+	<h3> <a href="assets/pdf/Antrag%20Ungarischer%20Verein%20Thurgau1.pdf">Letöltés</a>
+	</h3>
+	</div>
+	</div>
+	<div class="row visible-lg visible-md"> <object class="col-lg-12" data="assets/pdf/Antrag Ungarischer Verein Thurgau1.pdf" type="application/pdf" height="600"></object> </div>
+	<button type="button" class="btn btn-link btn-lg pull-right" onclick="$('body').animate({scrollTop : 0},800);"> <span class="glyphicon glyphicon-chevron-up"></span> </button>
+	</div>
 	<div class="container marketing">
-		<hr class="featurette-divider">
-
-		<div class="row" id="dij">
-			<div class="col-lg-4"></div>
-			<div class="col-lg-4">
-				<h3>Egyesületi tagdíj</h3>
-				<p class="lead">Családonként egy évre 40 CHF</p>
-
-
-			</div>
-		</div>
-
-		<!-- START THE FEATURETTES -->
-
-		<hr class="featurette-divider">
-
-
-
-		<br> <br> <br> <br> <br> <br> <br>
-		<div class="fb-like"
-			data-href="https://www.facebook.com/pages/Thurgaui-Magyarok-Egyes%C3%BClete/316234528527132"
-			data-layout="button_count" data-action="like" data-show-faces="true"
-			data-share="true"></div>
-		<footer class="text-center">
-			<button type="button" class="btn btn-link btn-lg pull-right"
-				onclick="$('body').animate({scrollTop : 0},800);">
-				<span class="glyphicon glyphicon-chevron-up"></span>
-			</button>
-			<p>
-				&copy; 2014-2015 Ungarischer Verein Thurgau. A honlapot készítette <a
-					href="http://tgnib.sofiplan.de">tgn-ib</a>
-			</p>
-
-		</footer>
+	<hr class="featurette-divider">
+	<div class="row" id="dij">
+	<div class="col-lg-4"></div>
+	<div class="col-lg-4">
+	<h3>Egyesületi tagdíj</h3>
+	<p class="lead">Családonként egy évre 40 CHF</p>
 	</div>
-
-
-	<!-- Bootstrap core JavaScript
-    ================================================== -->
+	</div>
+	<!-- START THE FEATURETTES -->
+	<hr class="featurette-divider"> <br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div class="fb-like" data-href="https://www.facebook.com/pages/Thurgaui-Magyarok-Egyes%C3%BClete/316234528527132" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+	<footer class="text-center"> <button type="button" class="btn btn-link btn-lg pull-right" onclick="$('body').animate({scrollTop : 0},800);"> <span class="glyphicon glyphicon-chevron-up"></span> </button>
+	</footer>
+	<p> © 2014-2015 Ungarischer Verein Thurgau. A honlapot készítette
+	<a href="http://tgnib.sofiplan.de">tgn-ib</a> </p>
+	</div>
+	<!-- Bootstrap core JavaScript ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script
-		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="assets/js/docs.min.js"></script>
 	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 	<script>
-		(function(i, s, o, g, r, a, m) {
-			i['GoogleAnalyticsObject'] = r;
-			i[r] = i[r] || function() {
-				(i[r].q = i[r].q || []).push(arguments)
-			}, i[r].l = 1 * new Date();
-			a = s.createElement(o), m = s.getElementsByTagName(o)[0];
-			a.async = 1;
-			a.src = g;
-			m.parentNode.insertBefore(a, m)
-		})(window, document, 'script',
-				'//www.google-analytics.com/analytics.js', 'ga');
-
-		ga('create', 'UA-152633-10', 'ungarischervereinthurgau.ch');
-		ga('send', 'pageview');
+	(function(i, s, o, g, r, a, m) {
+	i['GoogleAnalyticsObject'] = r;
+	i[r] = i[r] || function() {
+	(i[r].q = i[r].q || []).push(arguments)
+	}, i[r].l = 1 * new Date();
+	a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+	a.async = 1;
+	a.src = g;
+	m.parentNode.insertBefore(a, m)
+	})(window, document, 'script',
+	'//www.google-analytics.com/analytics.js', 'ga');
+	ga('create', 'UA-152633-10', 'ungarischervereinthurgau.ch');
+	ga('send', 'pageview');
 	</script>
-</body>
-</html>
+	</body></html>
